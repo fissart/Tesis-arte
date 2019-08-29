@@ -1,0 +1,594 @@
+# Resultados de la investigación
+
+
+
+## Descriptivos
+### Descriptivo opinión
+
+```{r, echo=FALSE, results="asis",message = FALSE, warning = FALSE}
+library(openxlsx) 
+wwt <- read.xlsx(xlsxFile="levene.xlsx",sheet=10,cols=c(4,10,14,15),rows=c(2:37),colNames=TRUE)
+```
+
+
+```{r, echo=FALSE, results="asis",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+par(mfrow=c(1,4)) 
+q1<-barplot(table(wwt$O1), main="Motivador", freq = TRUE, names.arg=c("No", "A veces", "Si"), cex.names=0.8)
+text(q1, table(wwt$O1)-2, labels = table(wwt$O1), pos = 3, cex = .75)
+q2<-barplot(table(wwt$O2), main="Formativa", freq = TRUE, names.arg=c("No", "A veces", "Si"), cex.names=0.8)
+text(q2, table(wwt$O2)-2, labels = table(wwt$O2), pos = 3, cex = .75)
+q3<-barplot(table(wwt$O3), main="Reforzador", freq = TRUE, names.arg=c("No", "A veces", "Si"), cex.names=0.8)
+text(q3, table(wwt$O3)-2, labels = table(wwt$O3), pos = 3, cex = .75)
+q<-barplot(table(wwt$O), main="Opinión", freq = TRUE, names.arg=c("No", "A veces", "Si"), cex.names=0.8)
+text(q, table(wwt$O)-2, labels = table(wwt$O), pos = 3, cex = .75)
+```
+
+### Descriptivo (VI)
+
+```{r, echo=FALSE, results="asis",message = FALSE, warning = FALSE}
+library(openxlsx)
+w2 <- read.xlsx(xlsxFile="levene.xlsx",sheet=4,cols=c(10,20,21),rows=c(2:37),colNames=FALSE)
+
+```
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3,  fig.align = 'center'}
+library(fdth)
+dist <- fdt(w2$X1, start=0, end=20, h=5,right = TRUE)
+dist1 <- fdt(w2$X2, start=0, end=20, h=5,right = TRUE)
+dist2 <- fdt(w2$X3, start=0, end=20, h=5,right = TRUE)
+options("digits" = 2)
+dist
+dist1
+dist2
+
+
+#attach(mtcars)
+par(mfrow=c(1,3)) 
+intervalos <- seq(from = 0, to = 20, by = 5) 
+h <- hist(w2$X1, 
+          breaks = intervalos,  # Añadimos los intervalos
+          freq = TRUE, # Representa frecuencias
+          right = TRUE, # Intervalos [a, b). Por defecto: (a, b]
+          col = rgb(79, 129, 189, max = 255), # Color de las columnas
+          border = "white",     # Color del borde 
+          labels = TRUE,        # Etiquetas de las columnas
+          main = "NATURALES", # Título del gráfico
+          xaxt = "n",           # Eliminamos eje x
+          yaxt = "n",           # Eliminamos eje y
+          xlab = "Notas",        # Título del eje x
+          ylab = NULL,          # Título del eje y
+          ylim = c(0,34))      # Escala de y (fijamos max en 20)
+axis(side = 1, at = intervalos)  # Etiquetas del eje x 
+h <- hist(w2$X2, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "ABSTRACTOS", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 39)) 
+axis(side = 1, at = intervalos)
+h <- hist(w2$X3, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "FRACTALES", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 39)) 
+axis(side = 1, at = intervalos)
+```
+
+
+### Descriptivo (VD)
+
+```{r, echo=FALSE, results="asis",message = FALSE, warning = FALSE}
+library(openxlsx)
+y1 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(1,2),rows=c(1:36),colNames=TRUE)
+y2 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(3,4),rows=c(1:36),colNames=TRUE)
+y3 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(5,6),rows=c(1:36),colNames=TRUE)
+y4 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(7,8),rows=c(1:36),colNames=TRUE)
+y5 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(9,10),rows=c(1:36),colNames=TRUE)
+y6 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(11,12),rows=c(1:36),colNames=TRUE)
+```
+
+#### Variedad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+library(fdth)
+dist_1 <- fdt(y1$TRADICIONAL, start=0, end=20, h=5,right = TRUE, digits = 2)
+distt_1 <- fdt(y1$EXPERIMENTAL, start=0, end=20, h=5,right = TRUE, digits = 3)
+options("digits" = 2)
+library("knitr")
+dist_1$table
+distt_1$table
+
+par(mfrow=c(1,3)) 
+hist(y1$TRADICIONAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "TRADICIONAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+hist(y1$EXPERIMENTAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "EXPERIMENTAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+boxplot(y1$TRADICIONAL,y1$EXPERIMENTAL)
+medias <- c(mean(y1$TRADICIONAL),mean(y2$EXPERIMENTAL))
+points(medias,pch=16,col="blue")
+```
+```{r, echo=FALSE,results='markup', fig.align = 'center'}
+summary(y1)
+```
+
+#### Unidad
+
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+library(fdth)
+dist_1 <- fdt(y2$TRADICIONAL, start=0, end=20, h=5,right = TRUE, digits = 2)
+distt_1 <- fdt(y2$EXPERIMENTAL, start=0, end=20, h=5,right = TRUE, digits = 3)
+options("digits" = 2)
+library("knitr")
+dist_1$table
+distt_1$table
+
+par(mfrow=c(1,3)) 
+hist(y2$TRADICIONAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "TRADICIONAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+hist(y2$EXPERIMENTAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "EXPERIMENTAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+boxplot(y2$TRADICIONAL,y2$EXPERIMENTAL)
+medias <- c(mean(y2$TRADICIONAL),mean(y2$EXPERIMENTAL))
+points(medias,pch=16,col="blue")
+```
+
+```{r, echo=FALSE,results='markup', fig.align = 'center'}
+summary(y2)
+```
+
+#### Ritmo 
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+library(fdth)
+dist_1 <- fdt(y3$TRADICIONAL, start=0, end=20, h=5,right = TRUE, digits = 2)
+distt_1 <- fdt(y3$EXPERIMENTAL, start=0, end=20, h=5,right = TRUE, digits = 3)
+options("digits" = 2)
+library("knitr")
+dist_1$table
+distt_1$table
+
+par(mfrow=c(1,3)) 
+hist(y3$TRADICIONAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "TRADICIONAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+hist(y3$EXPERIMENTAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "EXPERIMENTAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+boxplot(y3$TRADICIONAL,y3$EXPERIMENTAL)
+medias <- c(mean(y3$TRADICIONAL),mean(y2$EXPERIMENTAL))
+points(medias,pch=16,col="blue")
+```
+```{r, echo=FALSE,results='markup', fig.align = 'center'}
+summary(y3)
+```
+#### Equilibrio
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+library(fdth)
+dist_1 <- fdt(y4$TRADICIONAL, start=0, end=20, h=5,right = TRUE, digits = 2)
+distt_1 <- fdt(y4$EXPERIMENTAL, start=0, end=20, h=5,right = TRUE, digits = 3)
+options("digits" = 2)
+library("knitr")
+dist_1$table
+distt_1$table
+
+par(mfrow=c(1,3)) 
+hist(y4$TRADICIONAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "TRADICIONAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+hist(y4$EXPERIMENTAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "EXPERIMENTAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+boxplot(y4$TRADICIONAL,y4$EXPERIMENTAL)
+medias <- c(mean(y4$TRADICIONAL),mean(y2$EXPERIMENTAL))
+points(medias,pch=16,col="blue")
+```
+
+```{r, echo=FALSE,results='markup', fig.align = 'center'}
+summary(y4)
+```
+#### Énfasis
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+library(fdth)
+dist_1 <- fdt(y5$TRADICIONAL, start=0, end=20, h=5,right = TRUE, digits = 2)
+distt_1 <- fdt(y5$EXPERIMENTAL, start=0, end=20, h=5,right = TRUE, digits = 3)
+options("digits" = 2)
+library("knitr")
+dist_1$table
+distt_1$table
+
+par(mfrow=c(1,3)) 
+hist(y5$TRADICIONAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "TRADICIONAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+hist(y5$EXPERIMENTAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "EXPERIMENTAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+boxplot(y5$TRADICIONAL,y5$EXPERIMENTAL)
+medias <- c(mean(y5$TRADICIONAL),mean(y2$EXPERIMENTAL))
+points(medias,pch=16,col="blue")
+```
+```{r, echo=FALSE,results='markup', fig.align = 'center'}
+summary(y5)
+```
+#### Composición plástica tridimensional
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.height = 3, fig.align = 'center'}
+library(fdth)
+dist_1 <- fdt(y6$TRADICIONAL, start=0, end=20, h=5,right = TRUE, digits = 2)
+distt_1 <- fdt(y6$EXPERIMENTAL, start=0, end=20, h=5,right = TRUE, digits = 3)
+options("digits" = 2)
+library("knitr")
+dist_1$table
+distt_1$table
+
+par(mfrow=c(1,3)) 
+hist(y6$TRADICIONAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "TRADICIONAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+hist(y6$EXPERIMENTAL, 
+          breaks = intervalos,freq = TRUE,right = TRUE,col = rgb(79, 129, 189, max = 255),border = "white",labels = TRUE,  main = "EXPERIMENTAL", xaxt = "n", yaxt = "n", xlab = "Notas",ylab = NULL,ylim = c(0, 31)) 
+axis(side = 1, at = intervalos)
+
+boxplot(y6$TRADICIONAL,y6$EXPERIMENTAL)
+medias <- c(mean(y6$TRADICIONAL),mean(y2$EXPERIMENTAL))
+points(medias,pch=16,col="blue")
+```
+```{r, echo=FALSE,results='markup', fig.align = 'center'}
+summary(y6)
+```
+
+
+
+
+
+
+
+
+## Prueba de hipótesis
+### Primera hipotesis
+```{r, echo=FALSE, results="markup", fig.align = 'center'}
+library(openxlsx)
+y1 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(1, 2),rows=c(1:36),colNames=TRUE)
+```
+
+
+#### Prueba de homocedasticidad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE, fig.align = 'center'}
+library(car)
+group1 = as.factor(c(rep(1, length(y1$TRADICIONAL)), rep(2, length(y1$EXPERIMENTAL)))) 
+z1 = c(y1$TRADICIONAL, y1$EXPERIMENTAL)
+options("digits" = 2)
+leveneTest(z1, group1)
+```
+
+#### Prueba de normalidad 
+
+```{r , echo=FALSE, results="markup", fig.align = 'center'}
+library("nortest")
+shapiro.test(x = y1$TRADICIONAL)
+shapiro.test(x = y1$EXPERIMENTAL)
+
+```
+
+```{r , echo=FALSE, results="markup", fig.asp = .5, fig.align = 'center'}
+par(mfrow=c(1,2)) 
+hist(y1$TRADICIONAL, freq = F, xlim = c(3, 18),main='TRADICIONAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y1$TRADICIONAL, horizontal=TRUE,boxwex=0.01, at=-.005, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y1$TRADICIONAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y1$TRADICIONAL), sd(y1$TRADICIONAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+hist(y1$EXPERIMENTAL, freq = F, xlim = c(8, 20),main='EXPERIMENTAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+par(mfrow=c(1,2)) 
+boxplot(y1$EXPERIMENTAL, horizontal=TRUE,boxwex=0.02, at=-.009, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y1$EXPERIMENTAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y1$EXPERIMENTAL), sd(y1$EXPERIMENTAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+```
+
+
+
+#### Prueba T de Student dos muestras relacionadas
+
+```{r, echo=FALSE, results="markup"}
+test1 <- t.test(y1$TRADICIONAL,y1$EXPERIMENTAL)
+print(test1)
+```
+
+Por lo tanto: Al 95% de confianza se verifica que 0:000 <  0:05 por lo tanto la aplicación
+de la geometría fractal mejora significativamente la variedad en la composición
+plástica tridimensional de los estudiantes. Es decir el estudiante es capaz de varíar
+caracteristicas físicas, mostrar contrastes en los elementos y varíar la distribución
+de los elementos.
+
+
+
+
+### Segunda hipótesis
+```{r echo=FALSE, results="markup"}
+ y2 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(3, 4),rows=c(1:36),colNames=TRUE)
+```
+
+
+
+
+#### Prueba de homocedasticidad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE}
+library(car)
+group2 = as.factor(c(rep(1, length(y2$TRADICIONAL)), rep(2, length(y2$EXPERIMENTAL)))) 
+z2 = c(y2$TRADICIONAL, y2$EXPERIMENTAL)
+leveneTest(z2, group2)
+```
+
+#### Prueba de normalidad 
+
+
+```{r , echo=FALSE, results="markup"}
+library("nortest")
+shapiro.test(x = y2$TRADICIONAL)
+shapiro.test(x = y2$EXPERIMENTAL)
+```
+
+
+```{r , echo=FALSE, results="markup", fig.asp = .5}
+par(mfrow=c(1,2)) 
+hist(y2$TRADICIONAL, freq = F, xlim = c(3, 18),main='TRADICIONAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y2$TRADICIONAL, horizontal=TRUE,boxwex=0.01, at=-.005, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y2$TRADICIONAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y2$TRADICIONAL), sd(y2$TRADICIONAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+hist(y2$EXPERIMENTAL, freq = F, xlim = c(8, 20),main='EXPERIMENTAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y2$EXPERIMENTAL, horizontal=TRUE,boxwex=0.02, at=-.009, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y2$EXPERIMENTAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y2$EXPERIMENTAL), sd(y2$EXPERIMENTAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+```
+
+
+#### Prueba T de Student dos muestras relacionadas
+
+```{r, echo=FALSE, results="markup"}
+test2 <- t.test(y2$TRADICIONAL,y2$EXPERIMENTAL)
+print(test2)
+```
+
+Por lo tanto: Al 95% de confianza se verifica que $\rho=0.00<\alpha=0.05$ por lo tanto la aplicación de la
+**geometría fractal** mejora positivamente la **unidad** en la composición
+plástica tridimensional de los estudiantes. *Es decir el estudiante es capaz de  unificar caracteristicas
+físicas, unificar elementos plásticos y generar un sistema estructural*.
+
+
+
+
+
+### Tercera hipótesis
+```{r, echo=FALSE, results="markup"}
+ y3<- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(5, 6),rows=c(1:36),colNames=TRUE)
+```
+
+
+#### Prueba de homocedasticidad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE}
+library(car)
+group3 = as.factor(c(rep(1, length(y3$TRADICIONAL)), rep(2, length(y3$EXPERIMENTAL)))) 
+z3 = c(y3$TRADICIONAL, y3$EXPERIMENTAL)
+leveneTest(z3, group3)
+```
+
+#### Prueba de normalidad 
+
+
+```{r , echo=FALSE, results="markup"}
+library("nortest")
+shapiro.test(x = y3$TRADICIONAL)
+shapiro.test(x = y3$EXPERIMENTAL)
+```
+
+```{r , echo=FALSE, results="markup", fig.asp = .5}
+par(mfrow=c(1,2)) 
+hist(y3$TRADICIONAL, freq = F, xlim = c(3, 18),main='TRADICIONAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y3$TRADICIONAL, horizontal=TRUE,boxwex=0.01, at=-.005, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y3$TRADICIONAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y3$TRADICIONAL), sd(y3$TRADICIONAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+hist(y3$EXPERIMENTAL, freq = F, xlim = c(8, 20),main='EXPERIMENTAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y3$EXPERIMENTAL, horizontal=TRUE,boxwex=0.02, at=-.009, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y3$EXPERIMENTAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y3$EXPERIMENTAL), sd(y3$EXPERIMENTAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+```
+
+#### Prueba T de Student dos muestras relacionadas
+
+```{r, echo=FALSE, results="markup"}
+test3 <- t.test(y3$TRADICIONAL,y3$EXPERIMENTAL)
+print(test3)
+```
+
+
+Por lo tanto: Al 95% de confianza se verifica que $\rho=0.00<\alpha=0.05$ por lo tanto la aplicación
+de la **geometría fractal** mejora significantemente el **ritmo** en la composición plástica
+tridimensional de los estudiantes. *Es decir el estudiante es capaz de  representar ritmo progresivo,
+representar ritmo aleatorio regresivo, mostrar ritmo regular (constante) y representar
+ritmo mixto*.
+
+### Cuarta Hipótesis 
+
+```{r, echo=FALSE, results="markup"}
+ y4<- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(7,8),rows=c(1:36),colNames=TRUE)
+```
+
+
+#### Prueba de homocedasticidad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE}
+library(car)
+group4 = as.factor(c(rep(1, length(y4$TRADICIONAL)), rep(2, length(y4$EXPERIMENTAL)))) 
+z4 = c(y4$TRADICIONAL, y4$EXPERIMENTAL)
+leveneTest(z4, group4)
+```
+
+#### Prueba de normalidad 
+
+
+```{r , echo=FALSE, results="markup"}
+library("nortest")
+shapiro.test(x = y4$TRADICIONAL)
+shapiro.test(x = y4$EXPERIMENTAL)
+```
+
+
+```{r , echo=FALSE, results="markup", fig.asp = .5,fig.align = 'center'}
+par(mfrow=c(1,2)) 
+hist(y4$TRADICIONAL, freq = F, xlim = c(3, 18),main='TRADICIONAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y4$TRADICIONAL, horizontal=TRUE,boxwex=0.01, at=-.005, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y4$TRADICIONAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y4$TRADICIONAL), sd(y4$TRADICIONAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+hist(y4$EXPERIMENTAL, freq = F, xlim = c(8, 20),main='EXPERIMENTAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y4$EXPERIMENTAL, horizontal=TRUE,boxwex=0.02, at=-.009, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y4$EXPERIMENTAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y4$EXPERIMENTAL), sd(y4$EXPERIMENTAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+```
+
+#### Prueba T de Student dos muestras relacionadas
+
+```{r, echo=FALSE, results="markup"}
+test4 <- t.test(y4$TRADICIONAL,y4$EXPERIMENTAL)
+print(test4)
+```
+
+
+
+Por lo tanto: Al 95% de confianza se verifica que $\rho=0.00<\alpha=0.05$ por lo tanto la aplicación de
+la **geometría fractal** desarrolla significativamente el **equilibrio** en la composición plástica
+tridimensional tridimensional de los estudiantes. *Es decir el estudiante  es capaz de equilibrar
+centro de gravedad, equilibrar elementos plásticos y equilibrar tensión*.
+
+### Quinta hipotesis
+
+```{r, echo=FALSE, results="markup"}
+ y5<- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(9,10),rows=c(1:36),colNames=TRUE)
+```
+
+
+#### Prueba de homocedasticidad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE}
+library(car)
+group5 = as.factor(c(rep(1, length(y5$TRADICIONAL)), rep(2, length(y5$EXPERIMENTAL)))) 
+z5 = c(y5$TRADICIONAL, y5$EXPERIMENTAL)
+leveneTest(z5, group5)
+```
+
+
+
+
+#### Prueba de normalidad 
+
+```{r , echo=FALSE, results="markup"}
+library("nortest")
+shapiro.test(x = y5$TRADICIONAL)
+shapiro.test(x = y5$EXPERIMENTAL)
+```
+
+```{r , echo=FALSE, results="markup", fig.asp = .5}
+par(mfrow=c(1,2)) 
+hist(y5$TRADICIONAL, freq = F, xlim = c(3, 18),main='TRADICIONAL', xlab='Calificaciones', ylab = NULL,col = "aquamarine3",border = "white")
+boxplot(y5$TRADICIONAL, horizontal=TRUE,boxwex=0.01, at=-.005, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y5$TRADICIONAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y5$TRADICIONAL), sd(y5$TRADICIONAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+hist(y5$EXPERIMENTAL, freq = F, xlim = c(8, 20),main='EXPERIMENTAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y5$EXPERIMENTAL, horizontal=TRUE,boxwex=0.02, at=-.009, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y5$EXPERIMENTAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y5$EXPERIMENTAL), sd(y5$EXPERIMENTAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+```
+
+#### Prueba T de Student dos muestras relacionadas
+
+```{r, echo=FALSE, results="markup"}
+test5 <- t.test(y5$TRADICIONAL,y5$EXPERIMENTAL)
+print(test5)
+```
+
+Por lo tanto: Al 95% de confianza se verifica que $\rho=0.00<\alpha=0.05$ por lo tanto la aplicación de la
+**geometría fractal** desarrolla significativamente el **énfasis** en la composición plástica tridimensional
+tridimensional de los estudiantes. *Es decir el estudiante es capaz de  manifestar punto
+focal en formas, representar punto focal en color y exponer punto focal en texturas*.
+
+
+
+### Hipotesis general
+
+```{r, echo=FALSE, results="markup"}
+ y6 <- read.xlsx(xlsxFile="levene.xlsx",sheet=8,cols=c(11, 12),rows=c(1:36),colNames=TRUE)
+```
+
+
+#### Prueba de homocedasticidad
+
+```{r, echo=FALSE, results="markup",message = FALSE, warning = FALSE}
+library(car)
+group6 = as.factor(c(rep(1, length(y6$TRADICIONAL)), rep(2, length(y6$EXPERIMENTAL)))) 
+z6 = c(y6$TRADICIONAL, y6$EXPERIMENTAL)
+leveneTest(z6, group6)
+```
+
+
+
+
+#### Prueba de normalidad 
+
+```{r , echo=FALSE, results="markup"}
+library("nortest")
+shapiro.test(x = y6$TRADICIONAL)
+shapiro.test(x = y6$EXPERIMENTAL)
+```
+
+```{r , echo=FALSE, results="markup", fig.asp = .5, fig.align = 'center'}
+par(mfrow=c(1,2)) 
+hist(y6$TRADICIONAL, freq = F, xlim = c(3, 18),main='TRADICIONAL', xlab='Calificaciones',  ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y6$TRADICIONAL, horizontal=TRUE,boxwex=0.01, at=-.005, add=TRUE, axes=FALSE, col=c("GREEN","red","red"))
+lines(density(y6$TRADICIONAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y6$TRADICIONAL), sd(y6$TRADICIONAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+hist(y6$EXPERIMENTAL, freq = F, xlim = c(8, 20),main='EXPERIMENTAL', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "white")
+boxplot(y6$EXPERIMENTAL, horizontal=TRUE,boxwex=0.02, at=-.009, add=TRUE, axes=FALSE,col=c("GREEN","red","red"))
+lines(density(y6$EXPERIMENTAL), ylim = c(0, 1),xlim = c(3, 7), lwd = 2,col="blue")
+curve(dnorm(x, mean(y6$EXPERIMENTAL), sd(y6$EXPERIMENTAL)), lwd = 2, col = "black", add = T)
+legend("topleft", c("Observada", "Teórica"),lty = 1, lwd = 2, col = c("black", "blue"), bty = "n", cex = 0.8)
+```
+#### Prueba T de Student dos muestras relacionadas
+
+```{r, echo=FALSE, results="markup"}
+test6 <- t.test(y6$TRADICIONAL,y6$EXPERIMENTAL)
+print(test6)
+```
+
+Por lo tanto: Con un nivel de confianza del 95 %, se observa que $\rho=0.00<\alpha=0.05$, lo que indica
+rechazar la hipótesis nula y aceptar la hipótesis alterna, entonces, la aplicación de la
+**geometría fractal** influye significativamente en el desarrollo de la **composición plástica
+tridimensional** de los estudiantes de la Escuela de Formación Profesional de Ingenieria
+Civil UNSCH 2019. *Es decir el estudiante desarrolla la capacidad de aplicar la variedad,
+la unidad, el ritmo, el equilibrio y el equilibrio correctamente en la composición
+plástica tridimensional*.
+
+
+
+
