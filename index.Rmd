@@ -7,7 +7,6 @@ output:
   pdf_document: default
   html_document: default
   word_document: default
-urlcolor: blue
 description: This is a minimal example of using the bookdown package to write a book.
   The output format for this example is bookdown::gitbook.
 documentclass: report
@@ -20,3 +19,229 @@ site: bookdown::bookdown_site
 subparagraph: yes
 biblio-style: apalike
 ---
+
+# Problema de investigación
+
+
+## Planteamiento del problema
+
+Los artistas frecuentemente manipulan la *geometría fractal*, por lo menos intuitivamente,
+para desarrollar sus creaciones artísticas, no obstante, se observa que no todos
+utilizan la geometría fractal, en la realización de los trabajos artísticos plásticos, tendiendo
+a ser más intuitivos; probablemente por falta de conocimiento acerca de la utilidad
+de esta herramienta, el presente trabajo de investigación pretende concluir, que la utilización
+de la *geometría fractal*, mejorará la *composición plástica tridimensional*, y por
+tanto concluir que la geometría fractal es una herramienta primordial, en la estructuración
+o distribución de los elementos plásticos de acuerdo a los *principios de la composición*
+plástica tridimensional.
+
+A nivel nacional se observa que el *uso de la geometría es muy superficial*. Se sabe
+que ninguna ciencia o conocimiento técnico esta disociada de otras, Por lo tanto el proceso
+de la creación plástica esta involucrado con muchas ramas del conocimiento humano,
+en particular con las geometría que viene a ser la consecuencia racional de la ostentación
+histórica asumido por la cultura occidental, inevitablemente ineludible por tanto es
+necesario, optar por lo reflexivo del arte, que involucre un proceso sin condición.
+
+
+A nivel regional se observa la tendencia del uso de la geometría fractal muy deficiente,
+en algunas representación baga de un modelo. Se supone que el manejo de las
+geometría, está conexa con el desarrollo creativo y la confección de trabajos plásticos
+atractivos, por lo que es ineludible considerarla en los proyectos artísticos, para poder
+evitar conflictos en el proceso artístico de componer esculturas, con elementos plásticos
+distribuidos aleatoriamente.
+
+En particular a nivel regional existen la Escuela de Formación Profesional de Ingeniería
+Civil UNSCH – Ayacucho,x los docentes de arte tienen poco conocimiento sobre la
+estructuración de los elementos plásticos. Se considera organizar un criterio pedagógico
+en base a teorías prácticas y establecidas, que son ineludibles en la creación plástica, lo
+cual ya existe implícitamente, pero de manera muy exigua, de esta manera la creatividad
+fluye eficientemente, es decir, no depender de formas pilotos a copiar, sin discernir sobre
+que leyes gobiernan a tales modelos. El objetivo es deducir esas leyes, coleccionarlas
+en artículos y emplearlos en trabajos artísticos posteriores y teorizar infinitas nociones
+estructurales de aquellos modelos, de este modo las pruebas casuales de componer los
+fragmentos con el todo, se simplifica.
+
+
+El problema admite investigar la extensión geometría fractal en la reproducción de
+esculturas mucho más eficientes, compositiva y expresivamente, y si resultara, esta
+extensión intervenga en la creación de nuevos cursos recíprocos al contenido de este
+proyecto, en las entidades concernientes al arte en general: Música, Teatro, Danza y Artes
+Plásticas (Dibujo, Pintura, Escultura y Grabado). Los fractales por si solos ya son una
+obra de arte, porque los elementos que lo forman se asocian secuencialmente formando
+un todo integral, y atractivo a lo percepción visual.
+
+
+La separación de ciertos componentes artísticos entre estos la matemática en la creación
+artística plástica, implica la falta de creatividad, sensibilidad e identificación plástica
+en los educandos, con sus trabajos. Se asume sobre la comprensión probable de algún prototipo
+de geometría acreditado por nuestros ancestros, justificados en vestigios dejados
+por ellos, pero no se alcanzó a teorizar, esta es la brecha para condicionar una identidad
+formativa. Paradójicamente preexiste una predisposición a evaluar poco y no registrar lo
+experimentado, lo cual formarían fragmentos en la organización de una idea en particular.
+
+Del mismo modo, algunos artistas, por su formación habitual posiblemente excluyen
+ciertos conceptos determinados, entre ellas las secuencias, para desarrollar la creatividad,
+plasticidad y caracterización artística. Indistintamente, las escasas asignaturas artísticas
+que se establecen en la institución, no ilustran sus competencias como correspondería
+ser. Lo cual se puede relacionar, de manera sospechada, de los clamores estudiantiles,
+hacia los componentes defectuosos en la didáctica y la deserción de algunos con muchas
+competencias artísticas de las escuelas de arte, por lo poco permisoras que estas son, en
+la promoción laboral y cultural.
+
+En consecuencia es necesario, generar pluralidad epistemológica novedosa, auténtica
+y trascendente, para determinar el proceso intelectual y creativo mediante el tratamiento
+de investigaciones sólidas, es decir empezar a formar disposiciones de enseñanza mucho
+más sistemáticas, de manera que, el estudiante se involucre naturalmente con las artes
+plásticas, en la Escuela de Formación Profesional de Ingeniería Civil UNSCH – Ayacucho,
+y realice una carrera prometedora, conveniente, con el objetivo de un beneficio
+social y particular. Promoviendo el uso de la geometría fractal en las creaciones artísticas
+en las diferentes instituciones y especialidades.
+
+## Formulación del problema
+
+### Problema General
+¿En que medida la aplicación de la geometría fractal influye en la composición plástica
+tridimensional de los estudiantes de la Escuela de Formación Profesional de Ingenieria
+Civil UNSCH 2019?.
+
+### Problemas Específicos
+
+1. ¿De qué manera la aplicación de la geometría fractal mejorará la variedad en el
+composición plástica tridimensional de los estudiantes?.
+2. ¿De qué manera la aplicación de la geometría fractal mejorará la unidad en composición
+plástica tridimensional de los estudiantes?.
+
+3. ¿De qué manera la aplicación de la geometría fractal mejorará el ritmo en la composición
+plástica tridimensional de los estudiantes?.
+
+4. ¿De qué manera la aplicación de la geometría fractal desarrollará el equilibrio en
+la composición plástica tridimensional de los estudiantes?.
+
+5. ¿De qué manera la aplicación de la geometría fractal desarrollará el énfasis en la
+composición plástica tridimensional de los estudiantes?.
+
+## Justificación
+
+Las justificaciones sobre el porque del presente trabajo de investigación, se describen
+en cinco categorías, todas ellas señalando la importancia especifica.
+
+### Justificación artística
+
+El presente trabajo de investigación se realiza debido a la necesidad promover la utilización
+de la geometría fractal en la composición plástica tridimensional con el objetivo
+de generar trabajos artísticos de acuerdo a los principios compositivos, es decir un trabajo
+artístico muy bien estructurado.
+
+### Justificación educativa
+
+El objetivo de la investigación en el aspecto educativo es la de implementar esta práctica
+de reproducción plástica, en los planes de estudios, y hacerle ineludible, su uso por
+parte de los estudiantes, generando trabajos artísticos, estructuralmente agradables.
+
+## Justificación Legal
+
+Los estatutos presentes en la constitución política, que aprueban la ejecución del presente
+trabajo de investigación; las cuales avalan el proceso investigativo artístico; son la
+siguientes:
+
+El artículo 2, expresa que toda persona tiene derecho a la libertad de creación intelectual, artística, técnica y científica, así como a la propiedad sobre dichas creaciones y a
+su producto. El Estado propicia el acceso a la cultura y fomenta su desarrollo y difusión.
+El articulo 18 avala que la educación universitaria tiene como fines la formación profesional,
+la difusión cultural, la creación intelectual y artística y la investigación científica
+y tecnológica. El Estado garantiza la libertad de cátedra y rechaza la intolerancia.
+
+## Limitación
+
+Los obstáculos que se encontraron en la realización del trabajo fueron, los escasos
+referentes bibliográficos sobre todo de los antecedentes de la investigación. Además de
+la accesibilidad a una cantidad mayor de muestra. No hubo apoyo alguno por parte de
+las instituciones de educación artística. La disponibilidad de tiempo suficiente y la deficiencia
+de algunos recursos necesarios en la aplicación de este recursos de producción
+plástica.
+
+## Antecedentes
+
+### Internacionales
+
+[@internacional1] en su trabajo de investigación titulado «Elementos de la geometría
+fractal como estrategia didáctica para el desarrollo del pensamiento geométrico en estudiantes
+de la media básica del C.E. bachillerato en bienestar rural sede Ciato en el
+municipio de Pueblo Rico mediante elementos de la naturaleza»
+
+
+[@internacional2] «Intercomunicación entre matemáticas - ciencia - arte: un estudio sobre
+las implicaciones de las geometrías en la producción artística desde el gótico hasta el
+surrealismo»
+
+[@internacional3] «La geometría fractal en la licenciatura de diseño gráfico: propuesta
+pedagógica centrada ene un entorno computacional»
+
+
+### Nacionales
+
+[@nacional1] en su tesis «La cerámica como medio de expresión en el
+arte contemporáneo»
+
+[@nacional2] en su tesis «El valor simbólico del numero – idea en la ordenación
+de las figuras en el Obelisco Tello»
+
+[@nacional3] en su tesis «El desnudo en el arte mochica»
+
+### Regionales
+[@regional1] con la monografía «Formas de expresión y representación
+gráfica en niños de 7-13 años de edad de la escuela estatal N 36053 MX-P de «Barrios
+Altos» – Ayacucho»
+
+
+[@regional2] en la monografía «La composición artística en el diseño
+gráfico computarizado en la escuela superior de Bellas Artes «Felipe Guamán Poma de
+Ayala» Ayacucho – 2002»
+
+[@regional3] en la monografía «Uso adecuado del material didáctico
+(Torneta) en el aprendizaje en el taller de la Escuela Superior de Bellas Artes
+«Felipe Guamán Poma de Ayala» – 2004»
+
+## Objetivos
+### Objetivo general
+*Determinar* las influencias de la *aplicación* de la *geometría fractal* en la **composición
+plástica tridimensional** de los estudiantes de la Escuela de Formación Profesional de
+Ingenieria Civil UNSCH 2019.
+
+### Objetivos específicos
+
+1. *Justificar* la mejora que genera la *aplicación* de la *geometría fractal* en la **variedad**
+en la composición plástica tridimensional de los estudiantes.
+
+2. *Analizar* la mejora que genera la aplicación de la *geometría fractal* en la **unidad** en
+la composición plástica tridimensional de los estudiantes.
+
+3. *Verificar* los incrementos que genera la *aplicación* de la *geometría fractal* en el
+**ritmo** en la composición plástica tridimensional de los estudiantes.
+
+4. *Confirmar* el desarrollo que genera la *aplicación* de la *geometría fractal* en el **equilibrio**
+de composición plástica tridimensional de los estudiantes.
+
+5. *Constatar* el desarrollo que genera la *aplicación* de la geometría fractal en el **énfasis**
+de composición plástica tridimensional de los estudiantes.  \@ref(ww)
+
+
+```{r,echo=FALSE}
+#DiagrammeR::mermaid("
+#graph LR;
+##DiagrammeR::mermaid("
+#graph LR;
+#T(Verificar-Constatar-Justificar)-->A
+#    A(Geometría fractal)-->B(Equilibrio);
+#    A-->C(Énfasis);
+#E-->D;
+#A-->E(Variedad);
+#A-->F(Unidad);
+#F-->D;
+#A-->G(Ritmo);
+#G-->D;
+#    B-->D;
+#    C-->D(Composición plástica tridimensional);
+#",height=420)
+```
+
+

@@ -14,34 +14,35 @@
 \usepackage{makecell}
 \usepackage{lscape}
 \usepackage{multirow}
+\usepackage{enumitem}
 \usepackage{tabto}
 \usepackage{bigstrut}
 \usepackage{titlesec}
-
+\newcommand{\ww}{0.015em}
 \titlespacing*{\chapter}
-{0pt} {5em plus .01em minus .01em} {0em plus .01em minus .01em}
+{0pt} {5em plus \ww minus \ww} {0em plus \ww minus \ww}
 \titlespacing*{\section}
-{0pt} {0em plus .01em minus .01em} {0em plus .01em minus .01em}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
 \titlespacing*{\subsection}
-{0pt} {0em plus .01em minus .01em} {0em plus .01em minus .01em}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
 \titlespacing*{\subsubsection}
-{0pt} {0em plus .01em minus .01em} {0em plus .01em minus .01em}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
 \titlespacing*{\paragraph} {0pt}{1.25ex plus 1ex minus .2ex}{2em}
 \titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
 \titleformat*{\section}{\normalsize\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
-\setlength{\parskip}{0.7em plus .01em minus .01em}
+\setlength{\parskip}{0.5em plus \ww minus \ww}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xpatch}%space equation
 \xapptocmd\normalsize{%
-\abovedisplayskip=0.5em plus 0.01em minus 0.01em
-\abovedisplayshortskip=0.5em plus 0.01em minus 0.01em
-\belowdisplayskip=0.5em plus 0.01em minus 0.01em
-\belowdisplayshortskip=0.5em plus 0.01em minus 0.01em
+\abovedisplayskip=0.5em plus \ww minus \ww
+\abovedisplayshortskip=0.5em plus \ww minus \ww
+\belowdisplayskip=0.5em plus \ww minus \ww
+\belowdisplayshortskip=0.5em plus \ww minus \ww
 }{}{}
 %%%%%%%%%%%%%%%%%%%%%
-
+\setlist{topsep=0em plus \ww minus \ww, parsep=0.5em plus \ww minus \ww, itemsep=0em}
 
 \renewcommand{\thechapter}{\Roman{chapter}}
 
@@ -52,5 +53,32 @@
 \renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.5}
+\renewcommand{\floatpagefraction}{0.7}
 
 
+
+\renewcommand{\baselinestretch}{1.2}
+%%%%%%%%%%%% flex intertext
+\makeatletter
+\patchcmd\set@fontsize
+{\f@linespread\baselineskip}
+{\f@linespread\baselineskip  plus \ww minus \ww}
+{}{}
+\makeatother
+
+
+\usepackage{caption}
+\usepackage{tikz}
+
+\DeclareCaptionLabelSeparator*{spaced}{\\[1.7ex plus .01em minus .01em]}
+\captionsetup[table]{textfont=bf,format=plain,labelfont=bf,justification=justified,singlelinecheck=false,labelsep=spaced,skip=0pt}
+\captionsetup[figure]{labelsep=period,labelfont=bf,justification=justified,singlelinecheck=false,font=doublespacing}
+%\STsetdecimalsep{{.}}\spanishdecimal{.}
+
+\setlength{\textfloatsep}{0.0em plus \ww minus \ww}
