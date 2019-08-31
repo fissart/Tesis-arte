@@ -1,0 +1,44 @@
+# Marco teórico
+
+
+## Contexto de la investigación
+
+La Escuela de Formación Profesional de Ingeniería Civil UNSCH – Ayacucho destinada a
+desarrollar la capacidad intelectual, moral y afectiva de las personas de acuerdo con la cultura
+y las normas de convivencia de la sociedad a la que pertenecen en particular con respecto al
+arte que es toda forma de expresión de carácter creativo que puede tener un ser humano. Se
+trata de expresar lo que una persona siente a través de una infinidad de formas y técnicas, y
+promover en los educandos estas practicas.
+
+## Geometría fractal
+
+Un fractal es un **ente gráfico** *cuya organización básica, fraccionada, se repite a distintas
+escalas*. La expresión fue planteada por el matemático Benoit Mandelbrot en los 70. Diversas
+organizaciones naturales son de prototipo fractal. 
+
+La característica matemática de un objeto verdaderamente fractal es que su dimensión fractal es un número no entero si el objeto vive
+en el espacio bidimensional entonces su dimensión oscilará entre 0 y 2 y si vive en el espacio
+tridimensional tendrá una dimensión comprendido entre 2 y 3 pero nunca estos números
+enteros.
+
+1. **La Fractales naturales**
+
+2. **La Fractales abstractos**
+
+## Composición plástica tridimensional
+
+Las **principios** que se deben seguir, con el objetivo de obtener un trabajo artístico agradable se
+conocen como los **principios de la composición**, las cuales son: *Equilibrio, variedad, unidad,
+proporción, ritmo, simetría, armonía, balance, movimiento, repetición, énfasis, punto focal*.
+
+En esta investigación solo se consideran **cinco** de las mas importantes de acuerdo al criterio
+del investigador, además de considerar la similitud de sus conceptos. Es decir se consideran
+el equilibrio (proporción, balance, simetría), la variedad (patrones, repetición, recursividad)
+la unidad (armonía, conjunción) el énfasis (punto focal) y el ritmo (movimiento).
+
+1. **Variedad**
+2. **Unidad**
+3. **Ritmo**
+4. **Equilibrio**
+5. **Énfasis**
+

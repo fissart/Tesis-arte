@@ -1,0 +1,136 @@
+# Metodología {#ww}
+
+## Hipótesis
+
+### Hipótesis principal
+
+La aplicación de la geometría fractal influye significativamente en el desarrollo de
+la composición plástica tridimensional de los estudiantes de la Escuela de Formación
+Profesional de Ingenieria Civil UNSCH 2019.
+
+### Hipótesis específicas
+
+1. La aplicación de la geometría fractal mejora significativamente la variedad en la
+composición plástica tridimensional de los estudiantes.
+
+2. La aplicación de la geometría fractal mejora positivamente la unidad en la composición
+plástica tridimensional de los estudiantes.
+
+3. La aplicación de la geometría fractal mejora significantemente el ritmo en la composición
+plástica tridimensional de los estudiantes.
+
+4. La aplicación de la geometría fractal desarrolla significativamente el equilibrio en
+la composición plástica tridimensional tridimensional de los estudiantes.
+
+5. La aplicación de la geometría fractal desarrolla significativamente el énfasis en la
+composición plástica tridimensional tridimensional de los estudiantes
+
+## Variables
+
+## Operacionalización de variables
+### Definición conceptual de variables
+
+1. **Variable Independiente** (Geometría fractal)
+
+2. **Variable Dependiente** (Composición plástica tridimensional)
+
+3. **Variable Interviniente** (Aptitud artística y contexto social)
+
+### Operacionalización de variables
+
+1. **Geometría fractal:** Modelo
+alternativo que busca una regularidad en las relaciones entre un objeto y sus
+partes a diferentes escalas. 
+2. **Composición plástica tridimensional:** Constituida por reglas y principios que modela con los elementos plásticos.
+
+## Metodología
+
+### Tipo de estudio
+
+La investigación es de tipo explicativa experimental, porque se busca la causa y efecto
+en cada una de las variables de estudio, con manipulación de la variable independiente
+
+### Diseño
+
+El diseño de la investigación es preexperimental de un mismo grupo de trabajo con pre y
+posprueba, porque se tomó un solo grupo experimental.
+
+## Métodos de investigación
+
+1. Método experimental
+
+2. Método hipotético deductivo
+
+3. Método analítico
+
+4. Método estadístico
+
+## Población y muestra
+
+1.  **Población**: 1080 estudiantes de la EF IC matriculados en el ciclo impar 2019
+
+2. **Muestra**: 1080 estudiantes de la *serie 200*, en la EF IC matriculados en el ciclo impar 2019
+
+3. **Muestreo**: No probabilístico e intencional
+
+## Técnicas e instrumentos de recolección de datos 
+
+### Técnicas 
+1. La observación
+
+2. Experimentación
+
+2. Prueba escrita
+
+### Instrumentos 
+
+1. La ficha de observación 
+
+2. La lista de cotejo 
+
+3. Prueba escrita 
+
+4.  Ficha de opinión
+
+#### Módulos de experimentación
+
+
+1. Los fractales naturales
+
+2. Fractales abstractos
+
+3. Fractales 
+
+### Validación y confiabilidad de instrumentos
+
+#### Validación de instrumentos
+
+Juicio de expertos
+
+Expertos | Validación | Situación
+:--:|:--:|:--:
+Mg. Marcelino Efraín Taipe Carbajal | 0,8 | Aceptable |
+Dr. Pedro Huauya Quispe | 0,84 | Aceptable |
+Mg. Juarez Pulache José Pulache  | 0,84 | Aceptable |
+Promedio | 0,83 (83 %) | Aceptable |
+
+
+#### Confiabilidad de instrumentos
+
+mediante el Coeficiente de Pearson
+y la corrección de Spearman Brow
+
+Instrumentos | Coeficiente | Interpretación
+|:--:|:--:|:--:
+Ficha de observación (variable independiente) | 0.97 | Elevada
+Ficha de observación (variable independiente) | 1 | Elevada 
+Ficha de opinión  | 0.82| Aceptable
+PROMEDIO | 0.93 (93 %) | Elevada
+
+## Métodos de análisis de datos 
+
+
+
+1. **Análisis descriptivo: ** Medidas de tendencia central, dispersión y asimetría
+
+2. **Análisis inferencial:** Shapiro Wilks, Levene y T student [@surhone2010shapiro]
