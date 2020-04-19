@@ -1,0 +1,1373 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[12pt,]{report}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Geometría fractal en la composición plástica tridimensional de los estudiantes de la Escuela de Formación Profesional de Ingenieria Civil UNSCH 2019},
+            pdfauthor={MALLQUI BAÑOS Ricardo Michel},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\usepackage[spanish,es-noquoting]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs,longtable}
+\usepackage[referable]{threeparttablex}
+\usepackage{dsfont}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=2.5cm}
+\usepackage{booktabs}
+\renewcommand{\rmdefault}{ptm}
+\usepackage[lite,subscriptcorrection,nofontinfo,zswash]{mtpro2}
+\usepackage{textcase,tikz}
+\usepackage{makecell}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{tabto}
+\usepackage{bigstrut}
+\usepackage{titlesec}
+\newcommand{\ww}{0.015em}
+\titlespacing*{\chapter}
+{0pt} {5em plus \ww minus \ww} {0em plus \ww minus \ww}
+\titlespacing*{\section}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\subsection}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\subsubsection}
+{0pt} {0em plus \ww minus \ww}{0em plus \ww minus \ww}
+\titlespacing*{\paragraph} {0pt}{1.25ex plus 1ex minus .2ex}{2em}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\setlength{\parskip}{0.5em plus \ww minus \ww}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xpatch}%space equation
+\xapptocmd\normalsize{%
+\abovedisplayskip=0.5em plus \ww minus \ww
+\abovedisplayshortskip=0.5em plus \ww minus \ww
+\belowdisplayskip=0.5em plus \ww minus \ww
+\belowdisplayshortskip=0.5em plus \ww minus \ww
+}{}{}
+%%%%%%%%%%%%%%%%%%%%%
+\setlist{topsep=0em plus \ww minus \ww, parsep=0.5em plus \ww minus \ww, itemsep=0em}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\titleformat{\chapter}[display]
+{\normalfont\normalsize\bfseries\centering}{CAPÍTULO \thechapter}{0.0em}{\normalsize\bfseries}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.5}
+\renewcommand{\floatpagefraction}{0.7}
+
+
+
+\renewcommand{\baselinestretch}{1.2}
+%%%%%%%%%%%% flex intertext
+\makeatletter
+\patchcmd\set@fontsize
+{\f@linespread\baselineskip}
+{\f@linespread\baselineskip  plus \ww minus \ww}
+{}{}
+\makeatother
+
+
+\usepackage{caption}
+\usepackage{tikz}
+
+\DeclareCaptionLabelSeparator*{spaced}{\\[1.7ex plus .01em minus .01em]}
+\captionsetup[table]{textfont=bf,format=plain,labelfont=bf,justification=justified,singlelinecheck=false,labelsep=spaced,skip=0pt}
+\captionsetup[figure]{labelsep=period,labelfont=bf,justification=justified,singlelinecheck=false,font=doublespacing}
+%\STsetdecimalsep{{.}}\spanishdecimal{.}
+
+\setlength{\textfloatsep}{0.0em plus \ww minus \ww}
+% https://github.com/rstudio/rmarkdown/issues/337
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+% https://github.com/rstudio/rmarkdown/pull/252
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+
+\pretitle{\vspace{\droptitle}\centering\huge}
+\posttitle{\par}
+
+\preauthor{\centering\large\emph}
+\postauthor{\par}
+
+\predate{\centering\large\emph}
+\postdate{\par}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Geometría fractal en la composición plástica tridimensional de los estudiantes de la Escuela de Formación Profesional de Ingenieria Civil UNSCH 2019}
+\author{MALLQUI BAÑOS Ricardo Michel}
+\date{2020-04-18}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{problema-de-investigaciuxf3n}{%
+\chapter{Problema de investigación}\label{problema-de-investigaciuxf3n}}
+
+\hypertarget{planteamiento-del-problema}{%
+\section{Planteamiento del problema}\label{planteamiento-del-problema}}
+
+Los artistas frecuentemente manipulan la \emph{geometría fractal}, por lo menos intuitivamente,
+para desarrollar sus creaciones artísticas, no obstante, se observa que no todos
+utilizan la geometría fractal, en la realización de los trabajos artísticos plásticos, tendiendo
+a ser más intuitivos; probablemente por falta de conocimiento acerca de la utilidad
+de esta herramienta, el presente trabajo de investigación pretende concluir, que la utilización
+de la \emph{geometría fractal}, mejorará la \emph{composición plástica tridimensional}, y por
+tanto concluir que la geometría fractal es una herramienta primordial, en la estructuración
+o distribución de los elementos plásticos de acuerdo a los \emph{principios de la composición}
+plástica tridimensional.
+
+A nivel nacional se observa que el \emph{uso de la geometría es muy superficial}. Se sabe
+que ninguna ciencia o conocimiento técnico esta disociada de otras, Por lo tanto el proceso
+de la creación plástica esta involucrado con muchas ramas del conocimiento humano,
+en particular con las geometría que viene a ser la consecuencia racional de la ostentación
+histórica asumido por la cultura occidental, inevitablemente ineludible por tanto es
+necesario, optar por lo reflexivo del arte, que involucre un proceso sin condición.
+
+A nivel regional se observa la tendencia del uso de la geometría fractal muy deficiente,
+en algunas representación baga de un modelo. Se supone que el manejo de las
+geometría, está conexa con el desarrollo creativo y la confección de trabajos plásticos
+atractivos, por lo que es ineludible considerarla en los proyectos artísticos, para poder
+evitar conflictos en el proceso artístico de componer esculturas, con elementos plásticos
+distribuidos aleatoriamente.
+
+En particular a nivel regional existen la Escuela de Formación Profesional de Ingeniería
+Civil UNSCH -- Ayacucho,x los docentes de arte tienen poco conocimiento sobre la
+estructuración de los elementos plásticos. Se considera organizar un criterio pedagógico
+en base a teorías prácticas y establecidas, que son ineludibles en la creación plástica, lo
+cual ya existe implícitamente, pero de manera muy exigua, de esta manera la creatividad
+fluye eficientemente, es decir, no depender de formas pilotos a copiar, sin discernir sobre
+que leyes gobiernan a tales modelos. El objetivo es deducir esas leyes, coleccionarlas
+en artículos y emplearlos en trabajos artísticos posteriores y teorizar infinitas nociones
+estructurales de aquellos modelos, de este modo las pruebas casuales de componer los
+fragmentos con el todo, se simplifica.
+
+El problema admite investigar la extensión geometría fractal en la reproducción de
+esculturas mucho más eficientes, compositiva y expresivamente, y si resultara, esta
+extensión intervenga en la creación de nuevos cursos recíprocos al contenido de este
+proyecto, en las entidades concernientes al arte en general: Música, Teatro, Danza y Artes
+Plásticas (Dibujo, Pintura, Escultura y Grabado). Los fractales por si solos ya son una
+obra de arte, porque los elementos que lo forman se asocian secuencialmente formando
+un todo integral, y atractivo a lo percepción visual.
+
+La separación de ciertos componentes artísticos entre estos la matemática en la creación
+artística plástica, implica la falta de creatividad, sensibilidad e identificación plástica
+en los educandos, con sus trabajos. Se asume sobre la comprensión probable de algún prototipo
+de geometría acreditado por nuestros ancestros, justificados en vestigios dejados
+por ellos, pero no se alcanzó a teorizar, esta es la brecha para condicionar una identidad
+formativa. Paradójicamente preexiste una predisposición a evaluar poco y no registrar lo
+experimentado, lo cual formarían fragmentos en la organización de una idea en particular.
+
+Del mismo modo, algunos artistas, por su formación habitual posiblemente excluyen
+ciertos conceptos determinados, entre ellas las secuencias, para desarrollar la creatividad,
+plasticidad y caracterización artística. Indistintamente, las escasas asignaturas artísticas
+que se establecen en la institución, no ilustran sus competencias como correspondería
+ser. Lo cual se puede relacionar, de manera sospechada, de los clamores estudiantiles,
+hacia los componentes defectuosos en la didáctica y la deserción de algunos con muchas
+competencias artísticas de las escuelas de arte, por lo poco permisoras que estas son, en
+la promoción laboral y cultural.
+
+En consecuencia es necesario, generar pluralidad epistemológica novedosa, auténtica
+y trascendente, para determinar el proceso intelectual y creativo mediante el tratamiento
+de investigaciones sólidas, es decir empezar a formar disposiciones de enseñanza mucho
+más sistemáticas, de manera que, el estudiante se involucre naturalmente con las artes
+plásticas, en la Escuela de Formación Profesional de Ingeniería Civil UNSCH -- Ayacucho,
+y realice una carrera prometedora, conveniente, con el objetivo de un beneficio
+social y particular. Promoviendo el uso de la geometría fractal en las creaciones artísticas
+en las diferentes instituciones y especialidades.
+
+\hypertarget{formulaciuxf3n-del-problema}{%
+\section{Formulación del problema}\label{formulaciuxf3n-del-problema}}
+
+\hypertarget{problema-general}{%
+\subsection{Problema General}\label{problema-general}}
+
+¿En que medida la aplicación de la geometría fractal influye en la composición plástica
+tridimensional de los estudiantes de la Escuela de Formación Profesional de Ingenieria
+Civil UNSCH 2019?.
+
+\hypertarget{problemas-especuxedficos}{%
+\subsection{Problemas Específicos}\label{problemas-especuxedficos}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ¿De qué manera la aplicación de la geometría fractal mejorará la variedad en el
+  composición plástica tridimensional de los estudiantes?.
+\item
+  ¿De qué manera la aplicación de la geometría fractal mejorará la unidad en composición
+  plástica tridimensional de los estudiantes?.
+\item
+  ¿De qué manera la aplicación de la geometría fractal mejorará el ritmo en la composición
+  plástica tridimensional de los estudiantes?.
+\item
+  ¿De qué manera la aplicación de la geometría fractal desarrollará el equilibrio en
+  la composición plástica tridimensional de los estudiantes?.
+\item
+  ¿De qué manera la aplicación de la geometría fractal desarrollará el énfasis en la
+  composición plástica tridimensional de los estudiantes?.
+\end{enumerate}
+
+\hypertarget{justificaciuxf3n}{%
+\section{Justificación}\label{justificaciuxf3n}}
+
+Las justificaciones sobre el porque del presente trabajo de investigación, se describen
+en cinco categorías, todas ellas señalando la importancia especifica.
+
+\hypertarget{justificaciuxf3n-artuxedstica}{%
+\subsection{Justificación artística}\label{justificaciuxf3n-artuxedstica}}
+
+El presente trabajo de investigación se realiza debido a la necesidad promover la utilización
+de la geometría fractal en la composición plástica tridimensional con el objetivo
+de generar trabajos artísticos de acuerdo a los principios compositivos, es decir un trabajo
+artístico muy bien estructurado.
+
+\hypertarget{justificaciuxf3n-educativa}{%
+\subsection{Justificación educativa}\label{justificaciuxf3n-educativa}}
+
+El objetivo de la investigación en el aspecto educativo es la de implementar esta práctica
+de reproducción plástica, en los planes de estudios, y hacerle ineludible, su uso por
+parte de los estudiantes, generando trabajos artísticos, estructuralmente agradables.
+
+\hypertarget{justificaciuxf3n-legal}{%
+\section{Justificación Legal}\label{justificaciuxf3n-legal}}
+
+Los estatutos presentes en la constitución política, que aprueban la ejecución del presente
+trabajo de investigación; las cuales avalan el proceso investigativo artístico; son la
+siguientes:
+
+El artículo 2, expresa que toda persona tiene derecho a la libertad de creación intelectual, artística, técnica y científica, así como a la propiedad sobre dichas creaciones y a
+su producto. El Estado propicia el acceso a la cultura y fomenta su desarrollo y difusión.
+El articulo 18 avala que la educación universitaria tiene como fines la formación profesional,
+la difusión cultural, la creación intelectual y artística y la investigación científica
+y tecnológica. El Estado garantiza la libertad de cátedra y rechaza la intolerancia.
+
+\hypertarget{limitaciuxf3n}{%
+\section{Limitación}\label{limitaciuxf3n}}
+
+Los obstáculos que se encontraron en la realización del trabajo fueron, los escasos
+referentes bibliográficos sobre todo de los antecedentes de la investigación. Además de
+la accesibilidad a una cantidad mayor de muestra. No hubo apoyo alguno por parte de
+las instituciones de educación artística. La disponibilidad de tiempo suficiente y la deficiencia
+de algunos recursos necesarios en la aplicación de este recursos de producción
+plástica.
+
+\hypertarget{antecedentes}{%
+\section{Antecedentes}\label{antecedentes}}
+
+\hypertarget{internacionales}{%
+\subsection{Internacionales}\label{internacionales}}
+
+\citep{internacional1} en su trabajo de investigación titulado «Elementos de la geometría
+fractal como estrategia didáctica para el desarrollo del pensamiento geométrico en estudiantes
+de la media básica del C.E. bachillerato en bienestar rural sede Ciato en el
+municipio de Pueblo Rico mediante elementos de la naturaleza»
+
+\citep{internacional2} «Intercomunicación entre matemáticas - ciencia - arte: un estudio sobre
+las implicaciones de las geometrías en la producción artística desde el gótico hasta el
+surrealismo»
+
+\citep{internacional3} «La geometría fractal en la licenciatura de diseño gráfico: propuesta
+pedagógica centrada ene un entorno computacional»
+
+\hypertarget{nacionales}{%
+\subsection{Nacionales}\label{nacionales}}
+
+\citep{nacional1} en su tesis «La cerámica como medio de expresión en el
+arte contemporáneo»
+
+\citep{nacional2} en su tesis «El valor simbólico del numero -- idea en la ordenación
+de las figuras en el Obelisco Tello»
+
+\citep{nacional3} en su tesis «El desnudo en el arte mochica»
+
+\hypertarget{regionales}{%
+\subsection{Regionales}\label{regionales}}
+
+\citep{regional1} con la monografía «Formas de expresión y representación
+gráfica en niños de 7-13 años de edad de la escuela estatal N 36053 MX-P de «Barrios
+Altos» -- Ayacucho»
+
+\citep{regional2} en la monografía «La composición artística en el diseño
+gráfico computarizado en la escuela superior de Bellas Artes «Felipe Guamán Poma de
+Ayala» Ayacucho -- 2002»
+
+\citep{regional3} en la monografía «Uso adecuado del material didáctico
+(Torneta) en el aprendizaje en el taller de la Escuela Superior de Bellas Artes
+«Felipe Guamán Poma de Ayala» -- 2004»
+
+\hypertarget{objetivos}{%
+\section{Objetivos}\label{objetivos}}
+
+\hypertarget{objetivo-general}{%
+\subsection{Objetivo general}\label{objetivo-general}}
+
+\emph{Determinar} las influencias de la \emph{aplicación} de la \emph{geometría fractal} en la \textbf{composición
+plástica tridimensional} de los estudiantes de la Escuela de Formación Profesional de
+Ingenieria Civil UNSCH 2019.
+
+\hypertarget{objetivos-especuxedficos}{%
+\subsection{Objetivos específicos}\label{objetivos-especuxedficos}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{Justificar} la mejora que genera la \emph{aplicación} de la \emph{geometría fractal} en la \textbf{variedad}
+  en la composición plástica tridimensional de los estudiantes.
+\item
+  \emph{Analizar} la mejora que genera la aplicación de la \emph{geometría fractal} en la \textbf{unidad} en
+  la composición plástica tridimensional de los estudiantes.
+\item
+  \emph{Verificar} los incrementos que genera la \emph{aplicación} de la \emph{geometría fractal} en el
+  \textbf{ritmo} en la composición plástica tridimensional de los estudiantes.
+\item
+  \emph{Confirmar} el desarrollo que genera la \emph{aplicación} de la \emph{geometría fractal} en el \textbf{equilibrio}
+  de composición plástica tridimensional de los estudiantes.
+\item
+  \emph{Constatar} el desarrollo que genera la \emph{aplicación} de la geometría fractal en el \textbf{énfasis}
+  de composición plástica tridimensional de los estudiantes. \ref{ww}
+\end{enumerate}
+
+\hypertarget{marco-teuxf3rico}{%
+\chapter{Marco teórico}\label{marco-teuxf3rico}}
+
+\hypertarget{contexto-de-la-investigaciuxf3n}{%
+\section{Contexto de la investigación}\label{contexto-de-la-investigaciuxf3n}}
+
+La Escuela de Formación Profesional de Ingeniería Civil UNSCH -- Ayacucho destinada a
+desarrollar la capacidad intelectual, moral y afectiva de las personas de acuerdo con la cultura
+y las normas de convivencia de la sociedad a la que pertenecen en particular con respecto al
+arte que es toda forma de expresión de carácter creativo que puede tener un ser humano. Se
+trata de expresar lo que una persona siente a través de una infinidad de formas y técnicas, y
+promover en los educandos estas practicas.
+
+\hypertarget{geometruxeda-fractal}{%
+\section{Geometría fractal}\label{geometruxeda-fractal}}
+
+Un fractal es un \textbf{ente gráfico} \emph{cuya organización básica, fraccionada, se repite a distintas
+escalas}. La expresión fue planteada por el matemático Benoit Mandelbrot en los 70. Diversas
+organizaciones naturales son de prototipo fractal.
+
+La característica matemática de un objeto verdaderamente fractal es que su dimensión fractal es un número no entero si el objeto vive
+en el espacio bidimensional entonces su dimensión oscilará entre 0 y 2 y si vive en el espacio
+tridimensional tendrá una dimensión comprendido entre 2 y 3 pero nunca estos números
+enteros.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{La Fractales naturales}
+\item
+  \textbf{La Fractales abstractos}
+\end{enumerate}
+
+\hypertarget{composiciuxf3n-pluxe1stica-tridimensional}{%
+\section{Composición plástica tridimensional}\label{composiciuxf3n-pluxe1stica-tridimensional}}
+
+Las \textbf{principios} que se deben seguir, con el objetivo de obtener un trabajo artístico agradable se
+conocen como los \textbf{principios de la composición}, las cuales son: \emph{Equilibrio, variedad, unidad,
+proporción, ritmo, simetría, armonía, balance, movimiento, repetición, énfasis, punto focal}.
+
+En esta investigación solo se consideran \textbf{cinco} de las mas importantes de acuerdo al criterio
+del investigador, además de considerar la similitud de sus conceptos. Es decir se consideran
+el equilibrio (proporción, balance, simetría), la variedad (patrones, repetición, recursividad)
+la unidad (armonía, conjunción) el énfasis (punto focal) y el ritmo (movimiento).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Variedad}
+\item
+  \textbf{Unidad}
+\item
+  \textbf{Ritmo}
+\item
+  \textbf{Equilibrio}
+\item
+  \textbf{Énfasis}
+\end{enumerate}
+
+\hypertarget{ww}{%
+\chapter{Metodología}\label{ww}}
+
+\hypertarget{hipuxf3tesis}{%
+\section{Hipótesis}\label{hipuxf3tesis}}
+
+\hypertarget{hipuxf3tesis-principal}{%
+\subsection{Hipótesis principal}\label{hipuxf3tesis-principal}}
+
+La aplicación de la geometría fractal influye significativamente en el desarrollo de
+la composición plástica tridimensional de los estudiantes de la Escuela de Formación
+Profesional de Ingenieria Civil UNSCH 2019.
+
+\hypertarget{hipuxf3tesis-especuxedficas}{%
+\subsection{Hipótesis específicas}\label{hipuxf3tesis-especuxedficas}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  La aplicación de la geometría fractal mejora significativamente la variedad en la
+  composición plástica tridimensional de los estudiantes.
+\item
+  La aplicación de la geometría fractal mejora positivamente la unidad en la composición
+  plástica tridimensional de los estudiantes.
+\item
+  La aplicación de la geometría fractal mejora significantemente el ritmo en la composición
+  plástica tridimensional de los estudiantes.
+\item
+  La aplicación de la geometría fractal desarrolla significativamente el equilibrio en
+  la composición plástica tridimensional tridimensional de los estudiantes.
+\item
+  La aplicación de la geometría fractal desarrolla significativamente el énfasis en la
+  composición plástica tridimensional tridimensional de los estudiantes
+\end{enumerate}
+
+\hypertarget{variables}{%
+\section{Variables}\label{variables}}
+
+\hypertarget{operacionalizaciuxf3n-de-variables}{%
+\section{Operacionalización de variables}\label{operacionalizaciuxf3n-de-variables}}
+
+\hypertarget{definiciuxf3n-conceptual-de-variables}{%
+\subsection{Definición conceptual de variables}\label{definiciuxf3n-conceptual-de-variables}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Variable Independiente} (Geometría fractal)
+\item
+  \textbf{Variable Dependiente} (Composición plástica tridimensional)
+\item
+  \textbf{Variable Interviniente} (Aptitud artística y contexto social)
+\end{enumerate}
+
+\hypertarget{operacionalizaciuxf3n-de-variables-1}{%
+\subsection{Operacionalización de variables}\label{operacionalizaciuxf3n-de-variables-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Geometría fractal:} Modelo
+  alternativo que busca una regularidad en las relaciones entre un objeto y sus
+  partes a diferentes escalas.
+\item
+  \textbf{Composición plástica tridimensional:} Constituida por reglas y principios que modela con los elementos plásticos.
+\end{enumerate}
+
+\hypertarget{metodologuxeda}{%
+\section{Metodología}\label{metodologuxeda}}
+
+\hypertarget{tipo-de-estudio}{%
+\subsection{Tipo de estudio}\label{tipo-de-estudio}}
+
+La investigación es de tipo explicativa experimental, porque se busca la causa y efecto
+en cada una de las variables de estudio, con manipulación de la variable independiente
+
+\hypertarget{diseuxf1o}{%
+\subsection{Diseño}\label{diseuxf1o}}
+
+El diseño de la investigación es preexperimental de un mismo grupo de trabajo con pre y
+posprueba, porque se tomó un solo grupo experimental.
+
+\hypertarget{muxe9todos-de-investigaciuxf3n}{%
+\section{Métodos de investigación}\label{muxe9todos-de-investigaciuxf3n}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Método experimental
+\item
+  Método hipotético deductivo
+\item
+  Método analítico
+\item
+  Método estadístico
+\end{enumerate}
+
+\hypertarget{poblaciuxf3n-y-muestra}{%
+\section{Población y muestra}\label{poblaciuxf3n-y-muestra}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Población}: 1080 estudiantes de la EF IC matriculados en el ciclo impar 2019
+\item
+  \textbf{Muestra}: 1080 estudiantes de la \emph{serie 200}, en la EF IC matriculados en el ciclo impar 2019
+\item
+  \textbf{Muestreo}: No probabilístico e intencional
+\end{enumerate}
+
+\hypertarget{tuxe9cnicas-e-instrumentos-de-recolecciuxf3n-de-datos}{%
+\section{Técnicas e instrumentos de recolección de datos}\label{tuxe9cnicas-e-instrumentos-de-recolecciuxf3n-de-datos}}
+
+\hypertarget{tuxe9cnicas}{%
+\subsection{Técnicas}\label{tuxe9cnicas}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  La observación
+\item
+  Experimentación
+\item
+  Prueba escrita
+\end{enumerate}
+
+\hypertarget{instrumentos}{%
+\subsection{Instrumentos}\label{instrumentos}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  La ficha de observación
+\item
+  La lista de cotejo
+\item
+  Prueba escrita
+\item
+  Ficha de opinión
+\end{enumerate}
+
+\hypertarget{muxf3dulos-de-experimentaciuxf3n}{%
+\subsubsection{Módulos de experimentación}\label{muxf3dulos-de-experimentaciuxf3n}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Los fractales naturales
+\item
+  Fractales abstractos
+\item
+  Fractales
+\end{enumerate}
+
+\hypertarget{validaciuxf3n-y-confiabilidad-de-instrumentos}{%
+\subsection{Validación y confiabilidad de instrumentos}\label{validaciuxf3n-y-confiabilidad-de-instrumentos}}
+
+\hypertarget{validaciuxf3n-de-instrumentos}{%
+\subsubsection{Validación de instrumentos}\label{validaciuxf3n-de-instrumentos}}
+
+Juicio de expertos
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+Expertos & Validación & Situación\tabularnewline
+\midrule
+\endhead
+Mg. Marcelino Efraín Taipe Carbajal & 0,8 & Aceptable\tabularnewline
+Dr.~Pedro Huauya Quispe & 0,84 & Aceptable\tabularnewline
+Mg. Juarez Pulache José Pulache & 0,84 & Aceptable\tabularnewline
+Promedio & 0,83 (83 \%) & Aceptable\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{confiabilidad-de-instrumentos}{%
+\subsubsection{Confiabilidad de instrumentos}\label{confiabilidad-de-instrumentos}}
+
+mediante el Coeficiente de Pearson
+y la corrección de Spearman Brow
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+Instrumentos & Coeficiente & Interpretación\tabularnewline
+\midrule
+\endhead
+Ficha de observación (variable independiente) & 0.97 & Elevada\tabularnewline
+Ficha de observación (variable independiente) & 1 & Elevada\tabularnewline
+Ficha de opinión & 0.82 & Aceptable\tabularnewline
+PROMEDIO & 0.93 (93 \%) & Elevada\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{muxe9todos-de-anuxe1lisis-de-datos}{%
+\section{Métodos de análisis de datos}\label{muxe9todos-de-anuxe1lisis-de-datos}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Análisis descriptivo: } Medidas de tendencia central, dispersión y asimetría
+\item
+  \textbf{Análisis inferencial:} Shapiro Wilks, Levene y T student \citep{surhone2010shapiro}
+\end{enumerate}
+
+\hypertarget{resultados-de-la-investigaciuxf3n}{%
+\chapter{Resultados de la investigación}\label{resultados-de-la-investigaciuxf3n}}
+
+\hypertarget{descriptivos}{%
+\section{Descriptivos}\label{descriptivos}}
+
+\hypertarget{descriptivo-opiniuxf3n}{%
+\subsection{Descriptivo opinión}\label{descriptivo-opiniuxf3n}}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-3-1} \end{center}
+
+\hypertarget{descriptivo-vi}{%
+\subsection{Descriptivo (VI)}\label{descriptivo-vi}}
+
+\begin{verbatim}
+##  Class limits  f   rf rf(%) cf cf(%)
+##         (0,5]  1 0.03   2.8  1   2.8
+##        (5,10]  0 0.00   0.0  1   2.8
+##       (10,15] 34 0.94  94.4 35  97.2
+##       (15,20]  1 0.03   2.8 36 100.0
+\end{verbatim}
+
+\begin{verbatim}
+##  Class limits  f   rf rf(%) cf cf(%)
+##         (0,5]  1 0.03   2.8  1   2.8
+##        (5,10]  0 0.00   0.0  1   2.8
+##       (10,15] 33 0.92  91.7 34  94.4
+##       (15,20]  2 0.06   5.6 36 100.0
+\end{verbatim}
+
+\begin{verbatim}
+##  Class limits  f   rf rf(%) cf cf(%)
+##         (0,5]  1 0.03   2.8  1   2.8
+##        (5,10]  0 0.00   0.0  1   2.8
+##       (10,15] 32 0.89  88.9 33  91.7
+##       (15,20]  3 0.08   8.3 36 100.0
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-5-1} \end{center}
+
+\hypertarget{descriptivo-vd}{%
+\subsection{Descriptivo (VD)}\label{descriptivo-vd}}
+
+\hypertarget{variedad}{%
+\subsubsection{Variedad}\label{variedad}}
+
+\begin{verbatim}
+##   Class limits  f  rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.0     0  0     0
+## 2       (5,10]  7 0.2    20  7    20
+## 3      (10,15] 28 0.8    80 35   100
+## 4      (15,20]  0 0.0     0 35   100
+\end{verbatim}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  0 0.00     0  0     0
+## 3      (10,15] 20 0.57    57 20    57
+## 4      (15,20] 15 0.43    43 35   100
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-7-1} \end{center}
+
+\begin{verbatim}
+##   TRADICIONAL    EXPERIMENTAL 
+##  Min.   : 9.3   Min.   :12.7  
+##  1st Qu.:10.3   1st Qu.:14.0  
+##  Median :11.3   Median :14.7  
+##  Mean   :11.2   Mean   :14.8  
+##  3rd Qu.:12.0   3rd Qu.:15.7  
+##  Max.   :13.7   Max.   :17.0
+\end{verbatim}
+
+\hypertarget{unidad}{%
+\subsubsection{Unidad}\label{unidad}}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  8 0.23    23  8    23
+## 3      (10,15] 27 0.77    77 35   100
+## 4      (15,20]  0 0.00     0 35   100
+\end{verbatim}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  0 0.00     0  0     0
+## 3      (10,15] 22 0.63    63 22    63
+## 4      (15,20] 13 0.37    37 35   100
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-9-1} \end{center}
+
+\begin{verbatim}
+##   TRADICIONAL    EXPERIMENTAL 
+##  Min.   : 9.0   Min.   :12.3  
+##  1st Qu.:10.3   1st Qu.:13.7  
+##  Median :11.0   Median :14.7  
+##  Mean   :11.2   Mean   :14.8  
+##  3rd Qu.:12.0   3rd Qu.:15.7  
+##  Max.   :13.7   Max.   :17.3
+\end{verbatim}
+
+\hypertarget{ritmo}{%
+\subsubsection{Ritmo}\label{ritmo}}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  9 0.26    26  9    26
+## 3      (10,15] 26 0.74    74 35   100
+## 4      (15,20]  0 0.00     0 35   100
+\end{verbatim}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  0 0.00     0  0     0
+## 3      (10,15] 20 0.57    57 20    57
+## 4      (15,20] 15 0.43    43 35   100
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-11-1} \end{center}
+
+\begin{verbatim}
+##   TRADICIONAL    EXPERIMENTAL 
+##  Min.   : 9.3   Min.   :13.0  
+##  1st Qu.:10.2   1st Qu.:14.0  
+##  Median :11.3   Median :15.0  
+##  Mean   :11.2   Mean   :14.9  
+##  3rd Qu.:12.2   3rd Qu.:15.7  
+##  Max.   :13.7   Max.   :17.3
+\end{verbatim}
+
+\hypertarget{equilibrio}{%
+\subsubsection{Equilibrio}\label{equilibrio}}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10] 10 0.29    29 10    29
+## 3      (10,15] 25 0.71    71 35   100
+## 4      (15,20]  0 0.00     0 35   100
+\end{verbatim}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  0 0.00     0  0     0
+## 3      (10,15] 23 0.66    66 23    66
+## 4      (15,20] 12 0.34    34 35   100
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-13-1} \end{center}
+
+\begin{verbatim}
+##   TRADICIONAL    EXPERIMENTAL 
+##  Min.   : 8.7   Min.   :12.3  
+##  1st Qu.:10.0   1st Qu.:14.0  
+##  Median :11.3   Median :14.7  
+##  Mean   :11.1   Mean   :14.8  
+##  3rd Qu.:12.2   3rd Qu.:15.8  
+##  Max.   :13.0   Max.   :17.0
+\end{verbatim}
+
+\hypertarget{uxe9nfasis}{%
+\subsubsection{Énfasis}\label{uxe9nfasis}}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  6 0.17    17  6    17
+## 3      (10,15] 29 0.83    83 35   100
+## 4      (15,20]  0 0.00     0 35   100
+\end{verbatim}
+
+\begin{verbatim}
+##   Class limits  f  rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.0     0  0     0
+## 2       (5,10]  0 0.0     0  0     0
+## 3      (10,15] 21 0.6    60 21    60
+## 4      (15,20] 14 0.4    40 35   100
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-15-1} \end{center}
+
+\begin{verbatim}
+##   TRADICIONAL    EXPERIMENTAL 
+##  Min.   : 8.7   Min.   :12.7  
+##  1st Qu.:10.5   1st Qu.:13.7  
+##  Median :11.0   Median :15.0  
+##  Mean   :11.1   Mean   :14.7  
+##  3rd Qu.:12.0   3rd Qu.:15.5  
+##  Max.   :13.3   Max.   :17.0
+\end{verbatim}
+
+\hypertarget{composiciuxf3n-pluxe1stica-tridimensional-1}{%
+\subsubsection{Composición plástica tridimensional}\label{composiciuxf3n-pluxe1stica-tridimensional-1}}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  6 0.17    17  6    17
+## 3      (10,15] 29 0.83    83 35   100
+## 4      (15,20]  0 0.00     0 35   100
+\end{verbatim}
+
+\begin{verbatim}
+##   Class limits  f   rf rf(%) cf cf(%)
+## 1        (0,5]  0 0.00     0  0     0
+## 2       (5,10]  0 0.00     0  0     0
+## 3      (10,15] 20 0.57    57 20    57
+## 4      (15,20] 15 0.43    43 35   100
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-17-1} \end{center}
+
+\begin{verbatim}
+##   TRADICIONAL    EXPERIMENTAL 
+##  Min.   : 8.9   Min.   :12.9  
+##  1st Qu.:10.7   1st Qu.:13.9  
+##  Median :11.3   Median :15.0  
+##  Mean   :11.4   Mean   :14.9  
+##  3rd Qu.:12.2   3rd Qu.:15.5  
+##  Max.   :13.4   Max.   :17.0
+\end{verbatim}
+
+\hypertarget{prueba-de-hipuxf3tesis-surhone2010shapiro}{%
+\section{\texorpdfstring{Prueba de hipótesis \citep{surhone2010shapiro}}{Prueba de hipótesis {[}@surhone2010shapiro{]}}}\label{prueba-de-hipuxf3tesis-surhone2010shapiro}}
+
+\hypertarget{primera-hipotesis}{%
+\subsection{Primera hipotesis}\label{primera-hipotesis}}
+
+\hypertarget{prueba-de-homocedasticidad}{%
+\subsubsection{Prueba de homocedasticidad}\label{prueba-de-homocedasticidad}}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(>F)
+## group  1    0.01   0.91
+##       68
+\end{verbatim}
+
+\hypertarget{prueba-de-normalidad}{%
+\subsubsection{Prueba de normalidad}\label{prueba-de-normalidad}}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y1$TRADICIONAL
+## W = 1, p-value = 0.3
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y1$EXPERIMENTAL
+## W = 1, p-value = 0.6
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-22-1} \end{center}
+
+\hypertarget{prueba-t-de-student-dos-muestras-relacionadas}{%
+\subsubsection{Prueba T de Student dos muestras relacionadas}\label{prueba-t-de-student-dos-muestras-relacionadas}}
+
+\begin{verbatim}
+## 
+##  Welch Two Sample t-test
+## 
+## data:  y1$TRADICIONAL and y1$EXPERIMENTAL
+## t = -13, df = 68, p-value <2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4.2 -3.1
+## sample estimates:
+## mean of x mean of y 
+##        11        15
+\end{verbatim}
+
+Por lo tanto: Al 95\% de confianza se verifica que 0:000 \textless{} 0:05 por lo tanto la aplicación
+de la geometría fractal mejora significativamente la variedad en la composición
+plástica tridimensional de los estudiantes. Es decir el estudiante es capaz de varíar
+caracteristicas físicas, mostrar contrastes en los elementos y varíar la distribución
+de los elementos.
+
+\hypertarget{segunda-hipuxf3tesis}{%
+\subsection{Segunda hipótesis}\label{segunda-hipuxf3tesis}}
+
+\hypertarget{prueba-de-homocedasticidad-1}{%
+\subsubsection{Prueba de homocedasticidad}\label{prueba-de-homocedasticidad-1}}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(>F)
+## group  1    0.11   0.74
+##       68
+\end{verbatim}
+
+\hypertarget{prueba-de-normalidad-1}{%
+\subsubsection{Prueba de normalidad}\label{prueba-de-normalidad-1}}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y2$TRADICIONAL
+## W = 1, p-value = 0.4
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y2$EXPERIMENTAL
+## W = 1, p-value = 0.7
+\end{verbatim}
+
+\includegraphics{Z_1_files/figure-latex/unnamed-chunk-27-1.pdf}
+
+\hypertarget{prueba-t-de-student-dos-muestras-relacionadas-1}{%
+\subsubsection{Prueba T de Student dos muestras relacionadas}\label{prueba-t-de-student-dos-muestras-relacionadas-1}}
+
+\begin{verbatim}
+## 
+##  Welch Two Sample t-test
+## 
+## data:  y2$TRADICIONAL and y2$EXPERIMENTAL
+## t = -12, df = 68, p-value <2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4.2 -3.0
+## sample estimates:
+## mean of x mean of y 
+##        11        15
+\end{verbatim}
+
+Por lo tanto: Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación de la
+\textbf{geometría fractal} mejora positivamente la \textbf{unidad} en la composición
+plástica tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de unificar caracteristicas
+físicas, unificar elementos plásticos y generar un sistema estructural}.
+
+\hypertarget{tercera-hipuxf3tesis}{%
+\subsection{Tercera hipótesis}\label{tercera-hipuxf3tesis}}
+
+\hypertarget{prueba-de-homocedasticidad-2}{%
+\subsubsection{Prueba de homocedasticidad}\label{prueba-de-homocedasticidad-2}}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(>F)
+## group  1    0.29   0.59
+##       68
+\end{verbatim}
+
+\hypertarget{prueba-de-normalidad-2}{%
+\subsubsection{Prueba de normalidad}\label{prueba-de-normalidad-2}}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y3$TRADICIONAL
+## W = 1, p-value = 0.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y3$EXPERIMENTAL
+## W = 0.9, p-value = 0.1
+\end{verbatim}
+
+\includegraphics{Z_1_files/figure-latex/unnamed-chunk-32-1.pdf}
+
+\hypertarget{prueba-t-de-student-dos-muestras-relacionadas-2}{%
+\subsubsection{Prueba T de Student dos muestras relacionadas}\label{prueba-t-de-student-dos-muestras-relacionadas-2}}
+
+\begin{verbatim}
+## 
+##  Welch Two Sample t-test
+## 
+## data:  y3$TRADICIONAL and y3$EXPERIMENTAL
+## t = -13, df = 68, p-value <2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4.3 -3.1
+## sample estimates:
+## mean of x mean of y 
+##        11        15
+\end{verbatim}
+
+Por lo tanto: Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación
+de la \textbf{geometría fractal} mejora significantemente el \textbf{ritmo} en la composición plástica
+tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de representar ritmo progresivo,
+representar ritmo aleatorio regresivo, mostrar ritmo regular (constante) y representar
+ritmo mixto}.
+
+\hypertarget{cuarta-hipuxf3tesis}{%
+\subsection{Cuarta Hipótesis}\label{cuarta-hipuxf3tesis}}
+
+\hypertarget{prueba-de-homocedasticidad-3}{%
+\subsubsection{Prueba de homocedasticidad}\label{prueba-de-homocedasticidad-3}}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(>F)
+## group  1    0.01   0.91
+##       68
+\end{verbatim}
+
+\hypertarget{prueba-de-normalidad-3}{%
+\subsubsection{Prueba de normalidad}\label{prueba-de-normalidad-3}}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y4$TRADICIONAL
+## W = 1, p-value = 0.1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y4$EXPERIMENTAL
+## W = 1, p-value = 0.3
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-37-1} \end{center}
+
+\hypertarget{prueba-t-de-student-dos-muestras-relacionadas-3}{%
+\subsubsection{Prueba T de Student dos muestras relacionadas}\label{prueba-t-de-student-dos-muestras-relacionadas-3}}
+
+\begin{verbatim}
+## 
+##  Welch Two Sample t-test
+## 
+## data:  y4$TRADICIONAL and y4$EXPERIMENTAL
+## t = -13, df = 68, p-value <2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4.3 -3.1
+## sample estimates:
+## mean of x mean of y 
+##        11        15
+\end{verbatim}
+
+Por lo tanto: Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación de
+la \textbf{geometría fractal} desarrolla significativamente el \textbf{equilibrio} en la composición plástica
+tridimensional tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de equilibrar
+centro de gravedad, equilibrar elementos plásticos y equilibrar tensión}.
+
+\hypertarget{quinta-hipotesis}{%
+\subsection{Quinta hipotesis}\label{quinta-hipotesis}}
+
+\hypertarget{prueba-de-homocedasticidad-4}{%
+\subsubsection{Prueba de homocedasticidad}\label{prueba-de-homocedasticidad-4}}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(>F)
+## group  1    0.05   0.83
+##       68
+\end{verbatim}
+
+\hypertarget{prueba-de-normalidad-4}{%
+\subsubsection{Prueba de normalidad}\label{prueba-de-normalidad-4}}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y5$TRADICIONAL
+## W = 1, p-value = 0.6
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y5$EXPERIMENTAL
+## W = 1, p-value = 0.3
+\end{verbatim}
+
+\includegraphics{Z_1_files/figure-latex/unnamed-chunk-42-1.pdf}
+
+\hypertarget{prueba-t-de-student-dos-muestras-relacionadas-4}{%
+\subsubsection{Prueba T de Student dos muestras relacionadas}\label{prueba-t-de-student-dos-muestras-relacionadas-4}}
+
+\begin{verbatim}
+## 
+##  Welch Two Sample t-test
+## 
+## data:  y5$TRADICIONAL and y5$EXPERIMENTAL
+## t = -13, df = 68, p-value <2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4.2 -3.0
+## sample estimates:
+## mean of x mean of y 
+##        11        15
+\end{verbatim}
+
+Por lo tanto: Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación de la
+\textbf{geometría fractal} desarrolla significativamente el \textbf{énfasis} en la composición plástica tridimensional
+tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de manifestar punto
+focal en formas, representar punto focal en color y exponer punto focal en texturas}.
+
+\hypertarget{hipotesis-general}{%
+\subsection{Hipotesis general}\label{hipotesis-general}}
+
+\hypertarget{prueba-de-homocedasticidad-5}{%
+\subsubsection{Prueba de homocedasticidad}\label{prueba-de-homocedasticidad-5}}
+
+\begin{verbatim}
+## Levene's Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(>F)
+## group  1    0.01   0.94
+##       68
+\end{verbatim}
+
+\hypertarget{prueba-de-normalidad-5}{%
+\subsubsection{Prueba de normalidad}\label{prueba-de-normalidad-5}}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y6$TRADICIONAL
+## W = 1, p-value = 0.8
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  y6$EXPERIMENTAL
+## W = 1, p-value = 0.3
+\end{verbatim}
+
+\begin{center}\includegraphics{Z_1_files/figure-latex/unnamed-chunk-47-1} \end{center}
+
+\hypertarget{prueba-t-de-student-dos-muestras-relacionadas-5}{%
+\subsubsection{Prueba T de Student dos muestras relacionadas}\label{prueba-t-de-student-dos-muestras-relacionadas-5}}
+
+\begin{verbatim}
+## 
+##  Welch Two Sample t-test
+## 
+## data:  y6$TRADICIONAL and y6$EXPERIMENTAL
+## t = -13, df = 68, p-value <2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -4 -3
+## sample estimates:
+## mean of x mean of y 
+##        11        15
+\end{verbatim}
+
+Por lo tanto: Con un nivel de confianza del 95 \%, se observa que \(\rho=0.00<\alpha=0.05\), lo que indica
+rechazar la hipótesis nula y aceptar la hipótesis alterna, entonces, la aplicación de la
+\textbf{geometría fractal} influye significativamente en el desarrollo de la \textbf{composición plástica
+tridimensional} de los estudiantes de la Escuela de Formación Profesional de Ingenieria
+Civil UNSCH 2019. \emph{Es decir el estudiante desarrolla la capacidad de aplicar la variedad,
+la unidad, el ritmo, el equilibrio y el equilibrio correctamente en la composición
+plástica tridimensional}.
+
+\hypertarget{cloncluciones-y-recomendaciones}{%
+\chapter{Cloncluciones y recomendaciones}\label{cloncluciones-y-recomendaciones}}
+
+\hypertarget{concluciones}{%
+\section{Concluciones}\label{concluciones}}
+
+De acuerdo a los resultados generados, mediante la prueba de hipótesis de T-student con
+un nivel de confianza de 95\% y una significancia de 5 \%, justificando la implicación de la
+\textbf{geometría fractal} en la composición plástica tridimensional, se obtienen las conclusiones:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación
+  de la geometría fractal mejora significativamente la variedad en la composición
+  plástica tridimensional de los estudiantes. Es decir el estudiante es capaz de varíar
+  caracteristicas físicas, mostrar contrastes en los elementos y varíar la distribución
+  de los elementos.
+\item
+  Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación de la
+  \textbf{geometría fractal} mejora positivamente la \textbf{unidad} en la composición
+  plástica tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de unificar caracteristicas
+  físicas, unificar elementos plásticos y generar un sistema estructural}.
+\item
+  Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación
+  de la \textbf{geometría fractal} mejora significantemente el \textbf{ritmo} en la composición plástica
+  tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de representar ritmo progresivo,
+  representar ritmo aleatorio regresivo, mostrar ritmo regular (constante) y representar
+  ritmo mixto}.
+\item
+  Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación de
+  la \textbf{geometría fractal} desarrolla significativamente el \textbf{equilibrio} en la composición plástica
+  tridimensional tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de equilibrar
+  centro de gravedad, equilibrar elementos plásticos y equilibrar tensión}.
+\item
+  Al 95\% de confianza se verifica que \(\rho=0.00<\alpha=0.05\) por lo tanto la aplicación de la
+  \textbf{geometría fractal} desarrolla significativamente el \textbf{énfasis} en la composición plástica tridimensional
+  tridimensional de los estudiantes. \emph{Es decir el estudiante es capaz de manifestar punto
+  focal en formas, representar punto focal en color y exponer punto focal en texturas}.
+\item
+  Con un nivel de confianza del 95 \%, se observa que \(\rho=0.00<\alpha=0.05\), lo que indica
+  rechazar la hipótesis nula y aceptar la hipótesis alterna, entonces, la aplicación de la
+  \textbf{geometría fractal} influye significativamente en el desarrollo de la \textbf{composición plástica
+  tridimensional} de los estudiantes de la Escuela de Formación Profesional de Ingenieria
+  Civil UNSCH 2019. \emph{Es decir el estudiante desarrolla la capacidad de aplicar la variedad,
+  la unidad, el ritmo, el equilibrio y el equilibrio correctamente en la composición
+  plástica tridimensional}.
+\end{enumerate}
+
+\hypertarget{recomendaciones}{%
+\section{Recomendaciones}\label{recomendaciones}}
+
+De acuerdo a los resultados de la investigación y a la necesidad de colaborar, con estrategias
+didácticas en la enseñanza de la composición plástica tridimensional en el campo educativo,
+me permito recomendar:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A las \textbf{autoridades universitarias} a fin de implementar en la reglamentación de los términos
+  de referencia, sobre la \textbf{geometría fractal} para contribuir a la solución de los problemas
+  de la enseñanza y aprendizaje, en la comunidad universitaria.
+\item
+  A las \textbf{autoridades de la facultad de ingeniería minas, geología y civil UNSCH} y sus correspondientes
+  escuelas profesionales, a fin de \textbf{implementar en los planes curriculares},
+  nuevas asignaturas que permitan orientar la formación profesional de los estudiantes,
+  que involucren el desarrollo de las siguientes los siguientes principios de la composición: variedad,
+  unidad, ritmo y equilibrio; para coadyuvar en la solución de los problemas compositivos,
+  en la comunidad local, regional y nacional.
+\item
+  A los \textbf{docentes y estudiantes de la Escuela de Formación Profesional de Ingeniería
+  Civil UNSCH -- Ayacucho}, a fin de poner en práctica la \textbf{geometría fractal}.
+\end{enumerate}
+
+\hypertarget{anexo}{%
+\chapter*{Anexo}\label{anexo}}
+\addcontentsline{toc}{chapter}{Anexo}
+
+\includegraphics[width=1\textwidth,height=5.20833in]{222.pdf}
+\includegraphics[width=1\textwidth,height=5.20833in]{555.pdf}
+\includegraphics[width=1\textwidth,height=5.20833in]{777.pdf}
+\includegraphics[width=1\textwidth,height=5.20833in]{888.pdf}
+\includegraphics[width=1\textwidth,height=5.20833in]{999.pdf}
+
+\includegraphics{r5.jpg}
+
+\includegraphics{r5.jpg}
+
+\includegraphics{r2.jpeg}
+
+\includegraphics{r3.jpeg}
+
+\includegraphics{r4.jpeg}
+
+\includegraphics{ff3.jpg}
+
+\includegraphics{ff1.jpg}
+
+\includegraphics{ff2.jpg}
+
+\includegraphics{r2.jpg}
+
+\includegraphics{rrr.jpg}
+
+\includegraphics{rrrr.jpg}
+
+\includegraphics{rrrrr.jpg}
+
+\includegraphics{rrrrrr.jpg}
+
+\includegraphics{t5.jpg}
+
+\includegraphics{t5t.jpg}
+
+\includegraphics{y2.jpg}
+
+\includegraphics{y3.jpg}
+
+\includegraphics{1x.jpg}
+
+\includegraphics{2x.jpg}
+
+\includegraphics{g1.jpg}
+
+\includegraphics{g2.jpg}
+
+Mas imagenes del proceso en detalle dirijase al blog \url{https://fismarte.blogspot.com/}
+
+\bibliography{book.bib,packages.bib}
+
+\end{document}

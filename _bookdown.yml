@@ -1,5 +1,21 @@
-book_filename: "bookdown-demo"
+output_dir: "docs"
+book_filename: "Z_1"
+delete_merged_file: true
 language:
   ui:
     chapter_name: "Capítulo "
-delete_merged_file: true
+  label:
+      fig: "Figura "
+      tab: "Tabla "
+      eq: 'Ecuación '
+      thm: 'Teorema '
+      lem: 'Lema '
+      cor: 'Corolario '
+      prp: 'Proposición '
+      cnj: 'Conjectura '
+      def: 'Definición '
+      exm: 'Ejemplo '
+      exr: 'Ejercicio '
+      proof: 'Demostracion. '
+      remark: 'Observación. '
+      solution: 'Solución. '
